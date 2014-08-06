@@ -4,8 +4,8 @@ public class MouseIntoTheMaze {
 	public static void main (String[] args) {
 	
 		Maze maze = new Maze();
-//		maze.setEndRow(10);
-//		maze.setEndColumn(6);
+		maze.setEndRow(10);
+		maze.setEndColumn(6);
 		System.out.println("The Maze [" + maze.getTheMaze()[0].length + ":" + maze.getTheMaze().length +"]");
 		maze.printMaze();
 		if (maze.solve(5, 3)){

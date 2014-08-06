@@ -42,7 +42,7 @@ public class Maze {
 		
 		if(validPath(row, column)){
 			
-			theMaze[row][column] = "X";
+			theMaze[row][column] = "*";
 			if(row == getEndRow() && column == getEndColumn()){
 				theMaze[row][column] = "E";
 				done = true;
@@ -58,10 +58,11 @@ public class Maze {
 				if(!done){
 					done = solve(row, column-1);
 				}
+				if(done) return done;
 			}
-			if(done){
+//			if(done){
 				theMaze[row][column] = " ";
-			}
+//			}
 		}
 		return done;
 	}
